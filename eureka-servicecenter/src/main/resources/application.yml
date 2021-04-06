@@ -1,0 +1,10 @@
+server:
+  port: 6781 #服务注册中心端口号
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false #是否向服务注册中心注册自己
+    fetchRegistry: false #是否检索服务
+    serviceUrl: #服务注册中心的配置内容，指定服务注册中心位置
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
